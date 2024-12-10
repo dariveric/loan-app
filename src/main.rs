@@ -17,16 +17,16 @@ fn main() {
     let age:u8 = 47;
     let gender  = model::person::Gender::Masculino;
 
-    // creamos una instancia de persona
+    // creamos una instancia de person
     let juan = Person::new(id, name, paternal_surname, maternal_surname, age, gender);
     person_info_view(&juan);
 
     //variables de loan
-    
     let amount_borrowed = 1000.00;
     let interest_rate = 20.00;
     let start_date = "2/12/2024".to_string();
     
+    //creamos una instancia de loan
     let juan_load = Loan::new(model::type_load::TypeLoan::Semanal, amount_borrowed, interest_rate, start_date);
     load_info_view(&juan_load);
    

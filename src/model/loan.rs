@@ -40,10 +40,6 @@ impl Loan {
         &self.start_date
     }
 
-    pub fn get_remaining_payments(&self) -> &VecDeque<String> {
-        &self.remaining_payments
-    }
-
     fn generate_payment_dates(start_date: &str, num_payments: usize) -> VecDeque<String> {
         let mut payment_dates = VecDeque::new();
         let start_date = NaiveDate::parse_from_str(start_date, "%d/%m/%Y").unwrap();
@@ -62,6 +58,7 @@ impl Loan {
     pub fn calculate_payments(&self) -> f64 {
         self.calculate_interest_and_loan() / self.remaining_payments.len() as f64
     }
+
 
     // Función para calcular y procesar los pagos
     pub fn calculate_and_process_payments(&self) {

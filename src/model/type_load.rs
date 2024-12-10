@@ -5,4 +5,3 @@ pub enum TypeLoan {
     Quincenal,
     Mensual,
 }
-

@@ -11,4 +11,3 @@ pub fn person_info_view(person: &Person) {
     println!("Genero: {:?}", person.get_gender());
     println!("\n");
 }
-    

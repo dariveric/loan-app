@@ -1,7 +1,8 @@
 // Enum Gender
 #[derive(Debug)]
 pub enum Gender {
-    Masculino, Femanino,
+    Masculino,
+    Femanino,
 }
 
 // Struct Person
@@ -17,7 +18,14 @@ pub struct Person {
 
 // Implementation of Person
 impl Person {
-    pub fn new(id: u32, first_name: String, last_name: String, middle_name: String, age: u8, gender: Gender) -> Self {
+    pub fn new(
+        id: u32,
+        first_name: String,
+        last_name: String,
+        middle_name: String,
+        age: u8,
+        gender: Gender
+    ) -> Self {
         Person {
             id,
             first_name,

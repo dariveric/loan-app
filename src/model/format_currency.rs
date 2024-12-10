@@ -13,6 +13,6 @@ pub fn format_currency(amount: f64) -> String {
         .chars()
         .rev()
         .collect::<String>();
-    let decimal_part = parts.get(1).unwrap_or(&"00"); 
+    let decimal_part = parts.get(1).unwrap_or(&"00");
     format!("${}.{}", integer_part, decimal_part)
 }

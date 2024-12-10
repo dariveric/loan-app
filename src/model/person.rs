@@ -1,7 +1,7 @@
 // Enum Gender
 #[derive(Debug)]
 pub enum Gender {
-    MALE, FEMALE,
+    Masculino, Femanino,
 }
 
 // Struct Person

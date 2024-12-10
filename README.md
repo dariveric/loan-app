@@ -1,5 +1,5 @@
 dariveric@gmail.com
 
-**##Prestamo app**
+**Prestamo app**
 
 Aplicación echa en rust tipo consola

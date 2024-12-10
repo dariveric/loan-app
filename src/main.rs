@@ -1,7 +1,9 @@
 mod model;
+mod view;
+
 use model::loan::Loan;
 use model::person::Person;
-mod view;
+use model::type_load::TypeLoan;
 use view::person::person_info_view;
 use view::loan::load_info_view;
 
@@ -22,12 +24,13 @@ fn main() {
     person_info_view(&juan);
 
     //variables de loan
+    let type_load = TypeLoan::Semanal;
     let amount_borrowed = 1000.00;
     let interest_rate = 20.00;
     let start_date = "2/12/2024".to_string();
     
     //creamos una instancia de loan
-    let juan_load = Loan::new(model::type_load::TypeLoan::Semanal, amount_borrowed, interest_rate, start_date);
+    let juan_load = Loan::new(type_load, amount_borrowed, interest_rate, start_date);
     load_info_view(&juan_load);
    
 
